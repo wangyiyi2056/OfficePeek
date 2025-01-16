@@ -1,6 +1,5 @@
 <script setup lang="ts">
-  import VueOfficeExcel from "@vue-office/excel";
-  import "@vue-office/excel/lib/index.css";
+  import VueOfficePptx from "@vue-office/pptx";
   import { useFileViewer } from "../composables/useFileViewer";
   import FileUploader from "../components/FileUploader.vue";
   import { ACCEPTED_FILES } from "../types/file.ts";
@@ -12,12 +11,12 @@
 <template>
   <div class="viewer-wrapper">
     <FileUploader
-      :accept="ACCEPTED_FILES.EXCEL"
-      button-text="选择 Excel 文件"
+      :accept="ACCEPTED_FILES.PPT"
+      button-text="选择 PPT 文件"
       @file-change="handleFileChange"
     />
     <div v-if="fileUrl" class="viewer-container">
-      <vue-office-excel :src="fileUrl" />
+      <vue-office-pptx :src="fileUrl" />
     </div>
   </div>
 </template>

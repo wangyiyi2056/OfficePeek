@@ -1,19 +1,21 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+  import type { UploadFile } from "element-plus";
 
-interface Props {
-  accept: string
-  buttonText: string
-}
+  interface Props {
+    accept: string;
+    buttonText: string;
+  }
 
-const props = defineProps<Props>()
-const emit = defineEmits<{
-  (e: 'fileChange', event: Event): void
-}>()
+  const props = defineProps<Props>();
+  const emit = defineEmits<{
+    (e: "fileChange", file: File): void;
+  }>();
 
-const handleChange = (event: Event) => {
-  emit('fileChange', event)
-}
+  const handleChange = (uploadFile: UploadFile) => {
+    if (uploadFile.raw) {
+      emit("fileChange", uploadFile.raw);
+    }
+  };
 </script>
 
 <template>

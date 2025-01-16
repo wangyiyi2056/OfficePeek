@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { VueOfficeDocx } from '@vue-office/docx/lib'
-import '@vue-office/docx/lib/index.css'
-import { useFileViewer } from '../composables/useFileViewer'
-import FileUploader from '../components/FileUploader.vue'
-import { ACCEPTED_FILES } from '../types/file'
-import '../styles/viewer.css'
+  import VueOfficeDocx from "@vue-office/docx";
+  import { useFileViewer } from "../composables/useFileViewer";
+  import FileUploader from "../components/FileUploader.vue";
+  import { ACCEPTED_FILES } from "../types/file.ts";
+  import "../styles/viewer.css";
 
-const { fileUrl, handleFileChange } = useFileViewer()
+  const { fileUrl, handleFileChange } = useFileViewer();
 </script>
 
 <template>

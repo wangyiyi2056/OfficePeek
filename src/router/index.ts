@@ -22,6 +22,11 @@ const router = createRouter({
     {
       path: '/pdf',
       component: PdfViewer
+    },
+    {
+      path: '/ppt',
+      name: 'PptViewer',
+      component: () => import('../views/PptViewer.vue')
     }
   ]
 })

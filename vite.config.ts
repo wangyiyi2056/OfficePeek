@@ -6,17 +6,17 @@ export default defineConfig({
   resolve: {
     dedupe: ['vue'],
     alias: {
-      '@vue-office/pdf': '@vue-office/pdf/lib',
-      '@vue-office/docx': '@vue-office/docx/lib',
-      '@vue-office/excel': '@vue-office/excel/lib'
+      '@vue-office/pdf': '@vue-office/pdf',
+      '@vue-office/docx': '@vue-office/docx',
+      '@vue-office/excel': '@vue-office/excel'
     }
   },
   optimizeDeps: {
     include: [
       'vue',
-      '@vue-office/pdf/lib',
-      '@vue-office/docx/lib',
-      '@vue-office/excel/lib'
+      '@vue-office/pdf',
+      '@vue-office/docx',
+      '@vue-office/excel'
     ]
   }
 })

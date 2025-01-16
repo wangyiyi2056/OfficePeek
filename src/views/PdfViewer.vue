@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { VueOfficePdf } from '@vue-office/pdf/lib'
-import '@vue-office/pdf/lib/index.css'
-import { useFileViewer } from '../composables/useFileViewer'
-import FileUploader from '../components/FileUploader.vue'
-import { ACCEPTED_FILES } from '../types/file'
-import '../styles/viewer.css'
+  import VueOfficePdf from "@vue-office/pdf";
+  import { useFileViewer } from "../composables/useFileViewer";
+  import FileUploader from "../components/FileUploader.vue";
+  import { ACCEPTED_FILES } from "../types/file.ts";
+  import "../styles/viewer.css";
 
-const { fileUrl, handleFileChange } = useFileViewer()
+  const { fileUrl, handleFileChange } = useFileViewer();
 </script>
 
 <template>

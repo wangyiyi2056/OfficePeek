@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vue-office/docx": "1.2.0",
-    "@vue-office/excel": "1.2.0",
-    "@vue-office/pdf": "1.2.0",
+    "@vue-office/docx": "^1.6.2",
+    "@vue-office/excel": "^1.7.11",
+    "@vue-office/pdf": "^2.0.9",
+    "@vue-office/pptx": "^0.0.6",
     "element-plus": "^2.5.6",
     "vue": "^3.4.38",
+    "vue-demi": "0.14.6",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
